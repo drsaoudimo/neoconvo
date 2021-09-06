@@ -2,12 +2,13 @@
 include 'basic.php';
 if (isset($id)) {
     include 'home1.php';
-} else { ?>
+} else { 
+?>
 
 <!DOCTYPE html>
 <html lang="en-GB">
     <head>
-        <title>Netonvo</title>
+        <title>NeoConvo</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="Images/neoLogo.PNG" type="image/png">
@@ -17,7 +18,7 @@ if (isset($id)) {
     <body>
 
     <?php if ($mobile==1) { ?>
-      
+
     <div class='head-m'><a href='index.php' style='text-decoration:none;color:white;'>NeoConvo</a></div>
     <div class='economica' style='font-size:25px;margin:20px 20px 0px 20px;width:calc(100% - 40px);color:white;'>
       Log Into NeoConvo
@@ -69,30 +70,27 @@ style='width:100%;height:40px;font-size:16px;padding-left:15px;border-radius:40p
 </html>
 
 <?php
+
+require_once('retrieve.php');
+
+// check form submission
 if (isset($_POST['submit']) && !empty($_POST['uname']) && !empty($_POST['password'])) {
-    $uname=$_POST['uname'];
-    $pass=$_POST['password'];
-    try {
-        $sql = "SELECT id, pimage from MAIN WHERE uname='$uname' AND password='$pass';";
-        $stmt = $conn->prepare($sql);
-        $stmt->execute();
-        $r = $stmt->fetch();
-        $id = $r['id'];
-        $pimage = $r['pimage'];
-    } catch(PDOException $e) {
-        echo "<br><br><br><br>" . $sql . "<br>" . $e->getMessage();
-    }
-    if ($id > 0) {
-        // user credentials correct
-        $_SESSION['id'] = $id;
-        echo '<meta http-equiv="refresh" content="0; url=index.php">';
-    } else {
-        // user credentials incorrect
-        if ($mobile==1) {
-            echo '<div class="narrow" style="text-align:left;padding-left:20px;color:red;font-size:16px;width:calc(100% - 20px);">Wrong Email and/or Password.</div>';
-        } else {
-            echo "<div class='narrow' style='font-size:18px;margin-left:40px;color:red;'>Wrong Email and/or Password.</div>";
-        }
-    }
+  $uname=$_POST['uname'];
+  $passw=$_POST['password'];
+  // get user id
+  $id = get_id($conn, $uname, $passw);
+  // check user credentials
+  if ($id > 0) {
+      // user credentials are correct
+      $_SESSION['id'] = $id;
+      echo '<meta http-equiv="refresh" content="0; url=index.php">';
+  } else {
+      // user credentials are incorrect
+      if ($mobile==1) {
+          echo '<div class="narrow" style="text-align:left;padding-left:20px;color:red;font-size:16px;width:calc(100% - 20px);">Wrong Email and/or Password.</div>';
+      } else {
+          echo "<div class='narrow' style='font-size:18px;margin-left:40px;color:red;'>Wrong Email and/or Password.</div>";
+      }
+  }
 }
 ?>
