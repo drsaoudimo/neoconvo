@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Economica&display=swap');
+.narrow {
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+.oswald {
+  font-family: 'Oswald', sans-serif;
+}
+.economica {
+  font-family: 'Economica', sans-serif;
+}
+*{
+  margin:0px;
+  padding:0px;
+}
+body{
+  background-color: #0f8ec7;
+}
+.backbtn {
+    width:35px;
+    float:left;
+    height:50px;
+    margin: 0px 5px 0px 0px;
+    border:none;
+    background-color:white;
+    color:#0f8ec7;
+    cursor:pointer;
+}
+.backbtn:hover {
+    background-color:#DDDDDD;
+}
+.pinks {
+  margin: 0px 10px 0px 10px;
+  color: #757575;
+  text-decoration: none;
+}
+.pinks:hover {
+  border-bottom: 1px solid #757575;
+}
+.pott {
+  font-size:18px;
+  color:white;
+  line-height:34px;
+  height:34px;
+  padding: 10px 20px 10px 20px;
+  border-radius:35px;
+  border:0.5px solid white;
+  background-color: transparent;
+  cursor:pointer;
+}
+.pott:hover {
+  background-color:white;
+  color:#757575;
+}
+.head {
+  font-family: 'Economica', sans-serif;
+  margin: 0px 40px 0px 40px;
+  height: 70px;
+  width: calc(100% - 80px);
+  color: white;
+  line-height: 70px;
+  font-size: 30px;
+}
+.head-m {
+  font-family: 'Economica', sans-serif;
+  margin: 0px 10px 0px 10px;
+  color: white;
+  height: 50px;
+  line-height: 50px;
+  font-size: 25px;
+  padding-left: 10px;
+  border-bottom: 0.5px solid white;
+}
+.wel-but {
+  color: white;
+
+}
+.inp {
+  width: 270px;
+  border: none;
+  height: 35px;
+  font-size: 18px;
+  padding: 0px 15px;
+  margin-bottom: 10px;
+  border-radius: 35px;
+}
+.lbtn {
+  width: 300px;
+  height: 40px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  border-radius: 40px;
+  color:white;
+  border:0.5px solid white;
+  background-color: transparent;
+  cursor:pointer;
+}
+.lbtn:hover {
+  background-color:white;
+  color:#757575;
+}
