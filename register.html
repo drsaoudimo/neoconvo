@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Sign Up For NeoConvo</title>
+        <link rel="icon" href="Images/neoLogo.PNG" type="image/png">
+        <link rel="stylesheet" href='styles.css'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+    <div class='head'><a href='index.php' style='text-decoration:none;color:white;'>NeoConvo</a></div>
+    <div style='border-top:0.5px solid white;margin: 0px 0px 0px 20px;color:white;'>
+        <div class='narrow' style='margin-left:20px;width:calc(40% - 20px);border-right:height:100%;float:left;font-size:18px;'>
+        </br></br>
+        <h1 class='economica' style='font-size:40px;font-weight:100;'>Sign Up for NeoConvo</h1>
+        It's quick and easy.<br><br>
+	<form action='handler.php' method='post'>
+          <input type='text' name='fname' class='narrow' placeholder='Full Name'
+          style='width:300px;border:none;height:35px;font-size:18px;padding-left:15px;margin-bottom:10px;border-radius:35px;' /><br>
+          <input type='text' name='uname' class='narrow' placeholder='Username'
+          style='width:300px;border:none;height:35px;font-size:18px;padding-left:15px;margin-bottom:10px;border-radius:35px;' /><br>
+	  <input type='email' name='email' class='narrow' placeholder='Email'
+          style='width:300px;border:none;height:35px;font-size:18px;padding-left:15px;margin-bottom:10px;border-radius:35px;' /><br>
+          <select name='gender' class='narrow'
+          style='width:300px;border:none;height:35px;font-size:18px;padding-left:15px;margin-bottom:10px;border-radius:35px;'>
+	  <option>Male</option>
+	  <option>Female</option>
+	  </select>
+	  <br>
+          <input type='password' name='password' class='narrow' placeholder='Password'
+          style='width:300px;border:none;height:35px;font-size:18px;padding-left:15px;margin-bottom:10px;border-radius:35px;' /><br>
+          <input type='submit' name='submit' value='Sign Up' class='narrow pott'
+          style='width:300px;height:40px;font-size:18px;padding-left:15px;margin-bottom:10px;border-radius:40px;' />
+        </form>
+        Already have an account? <a href='login.php' style='text-decoration:none;color:white;'>Log In</a>
+      </div>
+      <img alt="welcome-image" src='Images/phone.jpg' style='width:60%;height:calc(100% - 71px);object-fit:cover;float:right;margin:0px 0px 0px 0px;'>
+    </div>
+  </body>
+</html>

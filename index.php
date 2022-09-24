@@ -4,7 +4,6 @@ if (isset($id)) {
     include 'home1.php';
 } else { 
 ?>
-
 <!DOCTYPE html>
 <html lang="en-GB">
     <head>
