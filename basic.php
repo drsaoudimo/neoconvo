@@ -9,7 +9,7 @@ if (isset($_SESSION['id'])) {
 
 // Connect to MySQL
 if (!isset($conn)) {
-    $servername = "us-west-2.6d9c06bb-d8ba-4a98-a6fc-cabcb527ea89.aws.ybdb.io:5433";
+    $servername = "us-west-2.6d9c06bb-d8ba-4a98-a6fc-cabcb527ea89.aws.ybdb.io";
     $username = "admin";
     $password = "iMY1LwJ4oMmA5YWqquuURuC716xQbK";
     $dbname = "yugabyte";
